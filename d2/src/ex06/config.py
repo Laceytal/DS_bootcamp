@@ -8,5 +8,5 @@ report_template = (
 
 log_file = "analytics.log"
 
-telegram_url = "https://api.telegram.org/bot8388283863:AAGcZQGJxpwRUK3iBGOztWyrHq0Jik310xc/sendMessage"
-telegram_chat_id = "896336895"  # id чата/канала
+telegram_url = "TG_URL"
+telegram_chat_id = "TG_CHAG_ID"  # id чата/канала
