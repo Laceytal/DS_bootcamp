@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+import requests, sys, pytest
+from bs4 import BeautifulSoup
+
+def test_total_revenue_correct():
+    result = financial('MSFT', 'Total Revenue')
+    assert isinstance(result, tuple)
+    assert result[0] == 'Total Revenue'
+    assert len(result) > 1
+
+def test_return_type_is_tuple():
+    result = financial('AAPL', 'Total Revenue')
+    assert isinstance(result, tuple)
+
+def test_invalid_ticker_raises_exception():
+    with pytest.raises(Exception):
+        financial('INVALIDTICKER123', 'Total Revenue')
+
+
+def test_invalid_field_raises_exception():
+    with pytest.raises(ValueError):
+        financial('MSFT', 'Nonexistent Field')
+
+
+
+def test_net_income_field():
+    result = financial('MSFT', 'Interest Income')
+    assert isinstance(result, tuple)
+    assert result[0] == 'Interest Income'
+
+def financial(ticker, field):
+    url = f"https://finance.yahoo.com/quote/{ticker}/financials"
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Referer': 'https://www.google.com/',
+        'DNT': '1'
+    }
+    cookies = {
+        'B': '1dqj8u3mhq4re&b=3&s=0b',
+        'A1': 'd=AQABBK0zq2MCEGQ6y1pQ3uYk6i0HuQZz9l8FEgEBAQHSoWNYZAAAAAA_eJwNwTQJAAAA&S=AQAAAk3tq9l3Z9WJZvq3K1Yw7vU',
+        'A3': 'd=AQABBK0zq2MCEGQ6y1pQ3uYk6i0HuQZz9l8FEgEBAQHSoWNYZAAAAAA_eJwNwTQJAAAA&S=AQAAAk3tq9l3Z9WJZvq3K1Yw7vU'
+    }
+
+    try:
+        response = requests.get(url, headers=headers, cookies=cookies, timeout=10)
+        response.raise_for_status()
+
+        soup = BeautifulSoup(response.text, "html.parser")
+        table = soup.find('div', class_ = 'tableBody yf-yuwun0')
+        if not table:
+            raise Exception("")
+        
+        rows = table.find_all('div', class_ = 'row lv-0 yf-t22klz')
+        for row in rows:
+            title_col = row.find('div', class_ = 'column sticky yf-t22klz').find('div', class_ = 'rowTitle yf-t22klz')
+            if title_col and title_col.get('title') == field:
+                values = [
+                    col.get_text().strip()
+                    for col in row
+                    if col.get_text().strip()
+                ]
+                return tuple(values)
+        raise ValueError(f"Field '{field}' not found")
+    
+    except Exception as e:
+        raise e
+
+if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        print(f"Wrong cli params num: {len(sys.argv)}, expected 3")
+        sys.exit(1)
+    
+    try:
+        # time.sleep(5)
+        print(financial(sys.argv[1], sys.argv[2]))
+    except Exception as e:
+        print(f"Exception {str(e)}")

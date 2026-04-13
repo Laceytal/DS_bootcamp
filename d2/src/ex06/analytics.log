@@ -1,0 +1,65 @@
+2025-08-25 19:59:01 Research initialized with path: ../ex02/data.csv
+2025-08-25 19:59:01 Reading file...
+2025-08-25 19:59:01 File successfully read with 12 records
+2025-08-25 19:59:01 Calculations initialized
+2025-08-25 19:59:01 Calculating the counts of heads and tails
+2025-08-25 19:59:01 Calculating fractions
+2025-08-25 19:59:01 Generating 3 random predictions
+2025-08-25 19:59:01 Saving data to report.txt
+2025-08-25 19:59:01 File saved successfully
+2025-08-25 19:59:01 Sending message to Telegram...
+2025-08-25 19:59:01 Starting new HTTPS connection (1): api.telegram.org:443
+2025-08-25 19:59:04 https://api.telegram.org:443 "POST /bot8388283863:AAGcZQGJxpwRUK3iBGOztWyrHq0Jik310xc/sendMessage HTTP/1.1" 400 73
+2025-08-25 19:59:04 Telegram error: 400 {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-08-25 19:59:16 Research initialized with path: ../ex02/data.csv
+2025-08-25 19:59:16 Reading file...
+2025-08-25 19:59:16 File successfully read with 12 records
+2025-08-25 19:59:16 Calculations initialized
+2025-08-25 19:59:16 Calculating the counts of heads and tails
+2025-08-25 19:59:16 Calculating fractions
+2025-08-25 19:59:16 Generating 3 random predictions
+2025-08-25 19:59:16 Saving data to report.txt
+2025-08-25 19:59:16 File saved successfully
+2025-08-25 19:59:16 Sending message to Telegram...
+2025-08-25 19:59:16 Starting new HTTPS connection (1): api.telegram.org:443
+2025-08-25 19:59:16 https://api.telegram.org:443 "POST /bot8388283863:AAGcZQGJxpwRUK3iBGOztWyrHq0Jik310xc/sendMessage HTTP/1.1" 400 73
+2025-08-25 19:59:16 Telegram error: 400 {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2025-08-25 20:04:45 Research initialized with path: ../ex02/data.csv
+2025-08-25 20:04:45 Reading file...
+2025-08-25 20:04:45 File successfully read with 12 records
+2025-08-25 20:04:45 Calculations initialized
+2025-08-25 20:04:45 Calculating the counts of heads and tails
+2025-08-25 20:04:45 Calculating fractions
+2025-08-25 20:04:45 Generating 3 random predictions
+2025-08-25 20:04:45 Saving data to report.txt
+2025-08-25 20:04:45 File saved successfully
+2025-08-25 20:04:45 Sending message to Telegram...
+2025-08-25 20:04:45 Starting new HTTPS connection (1): api.telegram.org:443
+2025-08-25 20:04:46 https://api.telegram.org:443 "POST /bot%3C8388283863:AAGcZQGJxpwRUK3iBGOztWyrHq0Jik310xc%3E/sendMessage HTTP/1.1" 404 55
+2025-08-25 20:04:46 Telegram error: 404 {"ok":false,"error_code":404,"description":"Not Found"}
+2025-08-25 20:07:26 Research initialized with path: ../ex02/data.csv
+2025-08-25 20:07:26 Reading file...
+2025-08-25 20:07:26 File successfully read with 12 records
+2025-08-25 20:07:26 Calculations initialized
+2025-08-25 20:07:26 Calculating the counts of heads and tails
+2025-08-25 20:07:26 Calculating fractions
+2025-08-25 20:07:26 Generating 3 random predictions
+2025-08-25 20:07:26 Saving data to report.txt
+2025-08-25 20:07:26 File saved successfully
+2025-08-25 20:07:26 Sending message to Telegram...
+2025-08-25 20:07:26 Starting new HTTPS connection (1): api.telegram.org:443
+2025-08-25 20:07:26 https://api.telegram.org:443 "POST /bot8388283863:AAGcZQGJxpwRUK3iBGOztWyrHq0Jik310xc/sendMessage HTTP/1.1" 200 364
+2025-08-25 20:07:26 Message successfully sent to Telegram
+2025-08-25 20:09:06 Research initialized with path: ../ex02/data.csv
+2025-08-25 20:09:06 Reading file...
+2025-08-25 20:09:06 File successfully read with 12 records
+2025-08-25 20:09:06 Calculations initialized
+2025-08-25 20:09:06 Calculating the counts of heads and tails
+2025-08-25 20:09:06 Calculating fractions
+2025-08-25 20:09:06 Generating 3 random predictions
+2025-08-25 20:09:06 Saving data to report.txt
+2025-08-25 20:09:06 File saved successfully
+2025-08-25 20:09:06 Sending message to Telegram...
+2025-08-25 20:09:06 Starting new HTTPS connection (1): api.telegram.org:443
+2025-08-25 20:09:07 https://api.telegram.org:443 "POST /bot8388283863:AAGcZQGJxpwRUK3iBGOztWyrHq0Jik310xc/sendMessage HTTP/1.1" 200 364
+2025-08-25 20:09:07 Message successfully sent to Telegram
